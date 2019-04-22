@@ -168,7 +168,7 @@ if __name__ == "__main__":
         start_epoch, best_pred = load(net, optimizer, load_best=True)
     except:
         start_epoch = 0; best_pred = 0
-    end_epoch = 1000
+    end_epoch = 30
     losses_per_epoch = []; accuracy_per_epoch = []
     
     for epoch in range(start_epoch, end_epoch):
@@ -216,6 +216,7 @@ if __name__ == "__main__":
     ax.set_ylabel("Loss per batch")
     ax.set_title("Loss vs Epoch")
     print('Finished Training')
+    plt.savefig(os.path.join("C:/Users/WT/Desktop/Python_Projects/TrafficLights/data/" ,"loss_vs_epoch.png"))
     
     fig2 = plt.figure()
     ax2 = fig2.add_subplot(222)
@@ -224,3 +225,4 @@ if __name__ == "__main__":
     ax2.set_ylabel("Accuracy")
     ax2.set_title("Accuracy vs Epoch")
     print('Finished Training')
+    plt.savefig(os.path.join("C:/Users/WT/Desktop/Python_Projects/TrafficLights/data/" ,"accuracy_vs_epoch.png"))
