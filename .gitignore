@@ -1,0 +1,8 @@
+*.tar
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.pth
+/data/*
